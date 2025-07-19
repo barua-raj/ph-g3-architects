@@ -35,8 +35,15 @@
     font-size: 1.25rem;
     font-weight: 600;
     padding: 20px 25px;
-    border: none;
+    border: 1px solid rgba(255, 144, 14, 1);
     border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.btn-primary:hover{
+    background-color: #FFFFFF;
+    color: rgba(66, 66, 66, 1);
+    border-color: rgba(255, 144, 14, 1);
 }
 .section-title{
     font-size: 2.813rem;
@@ -48,11 +55,11 @@ main{
 }
 main > section{
     margin-top: 130px;
-    border: 1px solid tomato;
+    /* border: 1px solid tomato; */
 }
 /* header section */
 header{
-    border: 1px solid tomato;
+    /* border: 1px solid tomato; */
 }
 .navbar{
     justify-content: space-between;
@@ -74,6 +81,16 @@ header{
     text-decoration: none;
     font-size: 1.125rem;
     font-weight: 500;
+    padding: 6px 18px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.nav-link:hover{
+    background-color: rgba(255, 144, 14, 1);
+    color: #ffffff;
+    border-color: rgba(255, 144, 14, 1);
 }
 .banner-content{
     max-width: 850px;
@@ -113,6 +130,40 @@ header{
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 32px;
+}
+/* features section */
+.features{
+    gap: 140px;
+}
+#feature-section-title{
+    border-left: 5px solid rgba(255, 144, 14, 1);
+    padding-left: 25px;
+}
+.feature-card{
+    padding: 30px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.22);
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.feature-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#experience-badge{
+    padding: 45px 42px;
+    font-size: 1.563rem;
+    font-weight: 500;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+#experience-year{
+    font-size: 4.063rem;
+    font-weight: 700;
+}
+.featured-architect img{
+    width: 100%;
 }
 /* some facts section */
 .facts-container{
@@ -161,17 +212,46 @@ header{
     margin: 0 auto;
     filter: grayscale(100%);
 }
+/* footer section */
+footer{
+    margin-top: 80px;
+    /* border: 1px solid tomato; */
+    background-color: rgba(255, 244, 231, 1);
+    max-width: 1440px;
+}
+.footer-custom{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+footer p{
+    font-size: 1.00rem;
+    /* padding: 40px 410px; */
+}
 /* responsive media query */
 @media screen and (max-width: 576px){
     .navbar,
     .nav-links,
-    .teams{
+    .teams,
+    .features{
         flex-direction: column;
+    }
+    .brand{
+        margin-bottom: 0px;
+    }
+    .nav-item{
+        margin-bottom: 20px;
+    }
+    .banner-title{
+        margin-top: 20px;
     }
     .team-img-container,
     .facts-container,
     .sponsor-companies{
         grid-template-columns: 1fr;
+    }
+    .teams-button{
+        margin-left: 130px;
     }
     .facts-container{
         justify-items: center;
@@ -185,10 +265,15 @@ header{
         margin-left: 20px;
         /* max-width: 530px; */
     }
+    #experience-badge{
+        margin-top: -80px;
+        margin-left: 65px;
+    }
 }
 /* medium size devices */
 @media screen and (min-width: 576px) and (max-width: 992px){
-    .teams{
+    .teams,
+    .features{
         flex-direction: column;
     }
     .our-features{
@@ -199,5 +284,9 @@ header{
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
         justify-items: center;
+    }
+    #experience-badge{
+        margin-top: -80px;
+        margin-left: 115px;
     }
 }
